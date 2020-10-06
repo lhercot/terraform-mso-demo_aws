@@ -67,7 +67,7 @@ resource "mso_rest" "aws_site" {
             }],
             "associatedRegion": "us-west-1"
           }],
-          "isVpnGatewayRouter": false,
+          "isVpnGatewayRouter": true,
           "isTGWAttachment": true,
           "cloudRsCtxProfileToGatewayRouterP": {
             "name": "WoS",
