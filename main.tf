@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    mso = {
+      source = "CiscoDevNet/mso"
+    }
+  }
+}
+
 data "mso_tenant" "wos" {
   name = var.tenant
   display_name = var.tenant
@@ -67,7 +75,7 @@ resource "mso_rest" "aws_site" {
             }],
             "associatedRegion": "us-west-1"
           }],
-          "isVpnGatewayRouter": true,
+          "isVpnGatewayRouter": false,
           "isTGWAttachment": true,
           "cloudRsCtxProfileToGatewayRouterP": {
             "name": "WoS",
