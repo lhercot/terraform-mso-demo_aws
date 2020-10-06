@@ -28,11 +28,11 @@ data "mso_site" "aws" {
 }
 
 data "mso_schema" "hybrid_cloud" {
-  name          = "terraform_hybrid_cloud"
+  name          = var.schema_name
 }
 
 resource "mso_rest" "aws_site" {
-  path = "api/v1/schemas/${mso_schema.hybrid_cloud.id}"
+  path = "api/v1/schemas/${data.mso_schema.hybrid_cloud.id}"
   method = "PATCH"
   payload = <<EOF
 [
