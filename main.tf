@@ -78,7 +78,7 @@ resource "mso_rest" "aws_site" {
           "isVpnGatewayRouter": false,
           "isTGWAttachment": true,
           "cloudRsCtxProfileToGatewayRouterP": {
-            "name": "WoS",
+            "name": "default",
             "tenantName": "infra"
           },
           "hubnetworkPeering": false

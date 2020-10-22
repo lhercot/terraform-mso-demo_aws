@@ -21,7 +21,3 @@ variable "schema_name" {
   default = "terraform_hybrid_cloud"
   description = "The name of the MSO schema to be used"
 }
-
-variable "mso_username" {}
-variable "mso_password" {}
-variable "mso_url" {}
